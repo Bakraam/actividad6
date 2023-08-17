@@ -7,6 +7,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { UserViewComponent } from './pages/user-view/user-view.component';
 import { NewUserComponent } from './pages/new-user/new-user.component';
 import { UpdateUserComponent } from './pages/update-user/update-user.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { UserCardComponent } from './components/user-card/user-card.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { UpdateUserComponent } from './pages/update-user/update-user.component';
     HomeComponent,
     UserViewComponent,
     NewUserComponent,
-    UpdateUserComponent
+    UpdateUserComponent,
+    MenuComponent,
+    UserCardComponent
   ],
   imports: [
     BrowserModule,
