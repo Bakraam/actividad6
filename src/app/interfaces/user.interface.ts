@@ -1,5 +1,6 @@
-export interface Usuarios {
-    id: number;
+export interface User {
+    _id?: string;
+    id?: number;
     first_name: string;
     last_name: string;
     username: string;
