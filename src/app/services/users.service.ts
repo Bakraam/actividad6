@@ -13,13 +13,28 @@ export class UsersService {
 
   constructor() { }
 
+  //Obtener todos los users
   getAll(): Observable<any> {
     return this.httpClient.get<any>(this.baseUrl)
   }
 
-  
+  //Obtener user por su id
   getById(id: string) : Promise<User> {
     return lastValueFrom(this.httpClient.get<User>(`${this.baseUrl}${id}`))
   }
+
+  //Borrar user
+  delete(id:string) : Promise<any> {
+    return lastValueFrom(this.httpClient.delete<any>(`${this.baseUrl}${id}`))
+  }
+
+  //Insertar nuevo user
+  /*
+  newUser(formValue:any) : Promise<any> {
+    return lastValueFrom(this.httpClient.post<any>(`${this.baseUrl}${id}`))
+  }
+  */
+
+  //Actualizar user
 
 }
