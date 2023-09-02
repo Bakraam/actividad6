@@ -1,4 +1,5 @@
 <section class="container-fluid mt-5 mb-5 ms-0 ps-0 pe-0">
+    <h5 class="mt-5 pt-3 mb-5  text-md-center fw-bold">Alumnos de la escuela</h5>
     <div class="row g-5 m-0">
         <article class="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3 m-0 pb-5 " *ngFor="let user of arrUsers">
             <app-user-card [miUser] = "user"></app-user-card>
@@ -8,14 +9,14 @@
     <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center pt-5">
           <li class="page-item ">
-            <a class="page-link text-primary-emphasis" href="#" aria-label="Previous">
+            <a class="page-link text-primary-emphasis" aria-label="Previous" (click)="ngOnInit()">
               <span aria-hidden="true">&laquo;</span>
             </a>
           </li>
-          <li class="page-item"><a class="page-link text-primary-emphasis" href="#">1</a></li>
-          <li class="page-item"><a class="page-link text-primary-emphasis" href="#">2</a></li>
+          <li class="page-item"><a class="page-link text-primary-emphasis" (click)="ngOnInit()">1</a></li>
+          <li class="page-item"><a class="page-link text-primary-emphasis" (click)="getUsersPage2()">2</a></li>
           <li class="page-item">
-            <a class="page-link text-primary-emphasis" href="#" aria-label="Next">
+            <a class="page-link text-primary-emphasis" aria-label="Next" (click)="getUsersPage2()">
               <span aria-hidden="true">&raquo;</span>
             </a>
           </li>
