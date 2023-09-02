@@ -1,4 +1,7 @@
-
 img{
     border-radius: 50%;
+}
+
+.bg{
+    background-color: rgba(14, 158, 158, 0.165);
 }
