@@ -1,0 +1,9 @@
+.navbar-brand{
+    display: flex;
+    gap: 20px;
+}
+
+h2{
+    font-family: 'Caveat', cursive;
+    font-size: xx-large;
+}
