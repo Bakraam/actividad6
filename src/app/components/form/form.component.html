@@ -1,1 +1,43 @@
-<p>form works!</p>
+<section class="container mt-3">
+    <h2 class="mt-5 pt-4">{{!userForm.value._id? 'NUEVO USUARIO' : 'ACTUALIZAR'}}</h2>
+    <form [formGroup]="userForm" (ngSubmit)="getDataForm()" >
+        <div class="mt-4">
+            <label for="first_name" class="form-label">Nombre</label>
+            <input type="text" id="first_name" placeholder="Introduce tu nombre" class="form-control" formControlName="first_name">
+            <p class="error" *ngIf="checkControl('first_name','required')">El campo es requerido</p>
+            <p class="error" *ngIf="checkControl('first_name','minlength')">La longitud mínima es de 3 caracteres</p>
+
+        </div>
+
+        <div class="mt-2">
+            <label for="last_name" class="form-label">Apellido</label>
+            <input type="text" id="last_name" placeholder="Introduce tu apellido" class="form-control" formControlName="last_name">
+            <p class="error" *ngIf="checkControl('last_name','required')">El campo es requerido</p>
+            <p class="error" *ngIf="checkControl('last_name','minlength')">La longitud mínima es de 3 caracteres</p>
+        </div>
+        
+        <div class="mt-2">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" id="email" placeholder="Introduce tu email" class="form-control" formControlName="email">
+            <p class="error" *ngIf="checkControl('email','required')">El campo es requerido</p>
+            <p class="error" *ngIf="checkControl('email','pattern')">El formato es incorrecto</p>
+        </div>
+        
+        <div class="mt-2">
+            <label for="username" class="form-label">Nombre de usuario</label>
+            <input type="text" id="username" placeholder="Introduce un nombre de usuario" class="form-control" formControlName="username">
+            <p class="error" *ngIf="checkControl('username','required')">El campo es requerido</p>
+            <p class="error" *ngIf="checkControl('username','minlength')">La longitud mínima es de 3 caracteres</p>
+        </div>
+
+        <div class="mt-2">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" placeholder="Introduce una contraseña" class="form-control" formControlName="password">
+            <p class="error" *ngIf="checkControl('password','required')">El campo es requerido</p>
+            <p class="error" *ngIf="checkControl('password','minlength')">La longitud mínima es de 3 caracteres</p>
+        </div>
+
+        <input type="submit" class="btn btn-primary mt-4" value="Guardar" [disabled]="!this.userForm.valid">
+    </form>
+</section>
+
