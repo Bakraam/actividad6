@@ -11,11 +11,9 @@
             
             <div class="btn-group pt-5 pb-5" role="group" aria-label="Basic outlined example">
                 <a class="btn btn-outline-dark w-auto px-4" (click)="deleteUser(oneUser?._id)">Eliminar</a>
-                <a class="btn btn-outline-dark px-4 ">Actualizar</a>
+                <a class="btn btn-outline-dark px-4" [routerLink]="['/updateuser', oneUser?._id]" >Actualizar</a>
                 <a class="btn btn-outline-dark" [routerLink]="['/home']">Volver a listado</a>
             </div>
         </div>
-
     </div>
-
 </section>

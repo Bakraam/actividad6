@@ -30,7 +30,5 @@ export class UserViewComponent {
       alert ('El usuario ha sido eliminado correctamente')
       this.router.navigate(['/home'])
     }
-
   }
-
 }
