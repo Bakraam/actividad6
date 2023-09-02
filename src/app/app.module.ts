@@ -9,6 +9,8 @@ import { UserViewComponent } from './pages/user-view/user-view.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { UserCardComponent } from './components/user-card/user-card.component';
 import { FormComponent } from './components/form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { FormComponent } from './components/form/form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
